@@ -1,3 +1,4 @@
+% Problem 1
 % Set the range of n value
 n = [-3 -2 -1 0 1 2 3 4 5];
 % The value of h[n]
@@ -27,7 +28,7 @@ xlabel('n');
 ylabel('y[n]');
 title('(c)');
 
-
+% Problem 2
 % Set the range of n value
 n = [-3 -2 -1 0 1 2 3 4 5 6];
 % The value of h[n]
@@ -55,4 +56,12 @@ xlabel('n');
 ylabel('y[n]');
 title('(c)');
 
-
+% Problem 5(f) partial fraction expansion
+syms A B C
+eqn1 = A + B + C == -3.25;
+eqn2 = -0.5*A - 1.25*B + 0.25*C == -1;
+eqn3 = -0.5*A + 0.25*B - 0.125*C == -1/2;
+sol = solve([eqn1, eqn2, eqn3], [A, B, C]);
+ASol = sol.A;
+BSol = sol.B;
+CSol = sol.C;
