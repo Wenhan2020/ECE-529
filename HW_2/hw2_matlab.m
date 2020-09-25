@@ -65,3 +65,13 @@ sol = solve([eqn1, eqn2, eqn3], [A, B, C]);
 ASol = sol.A;
 BSol = sol.B;
 CSol = sol.C;
+
+% Problem 4
+b = [0.3375 0 -0.3375];
+a = [1 -0.2326 0.3249];
+[h,w] = freqz(b,a,100);
+x = [0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+y = filter(b, a, x);
+stem(y);
+xlabel('n');
+ylabel('y[n]');
